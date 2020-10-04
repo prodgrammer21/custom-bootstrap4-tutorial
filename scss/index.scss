@@ -1,0 +1,56 @@
+$primary: rgb(62, 161, 62);
+$secondary: rgb(22, 129, 106);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: 20px,
+    2: 40px,
+    3: 60px,
+    4: 80px,
+    5: 100px,
+  ),
+  $spacers
+);
+
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    1: 20%,
+    2: 40%,
+    3: 50%,
+    4: 60%,
+    auto: auto,
+  ),
+  $sizes
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 300px,
+  md: 500px,
+  lg: 700px,
+  xl: 900px,
+  xxl: 1100px,
+) !default;
+
+$border-radius: 30px;
+
+$custom-backgrounds: (
+  "red": red,
+  "blue": blue,
+  "green": green,
+  "yellow": yellow,
+);
+
+@each $key, $value in $custom-backgrounds {
+  .mybg-#{$key} {
+    background: $value;
+  }
+}
+
+$transition-fade: opacity 3s linear;
+
+@import "../bootstrap/scss/bootstrap.scss";
